@@ -8,7 +8,8 @@ const agenda = [
 
 function agendarTurno(nombre, fecha, hora) {
     const nuevoTurno = { nombre, fecha, hora};
-    agenda.push(nuevoTurno)
+    agenda.push(nuevoTurno);
+    alert(`Turno agendado con exito para ${nombre} el dia ${fecha} a las ${hora}`);
 }
 
 function mostrarAgenda() {
@@ -37,4 +38,11 @@ function iniciar(){
 
 iniciar();
 
-mostrarAgenda();
+function mostrarAgenda() {
+    let mensaje = "Turnos Agendados:\n";
+    for (const turno of agenda) {
+        mensaje += `${turno.nombre} - ${turno.fecha} a las ${turno.hora}\n`;
+    }
+    alert(mensaje);  
+    console.log(mensaje);
+}

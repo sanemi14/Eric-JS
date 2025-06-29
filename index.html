@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScripts</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bar Online - Carrito</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Primera Entrega de Curso JS</h1>
-    
-    <script src="./agenda.js"></script>
+
+  <h1>Eric's Bar</h1>
+
+  <section id="menu">
+    <h2>Menú de Productos</h2>
+    <div id="productos"></div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <div id="lista-carrito"></div>
+    <p>Su Total es: €<span id="total">0.00</span></p>
+    <button id="vaciar-carrito">Vaciar Carrito</button>
+  </section>
+    <section id="agregar-producto">
+  <h2>Agregar Nuevo Producto</h2>
+  <form id="form-nuevo-producto">
+    <input type="text" id="nombre-nuevo" placeholder="Nombre del producto" required />
+    <input type="number" id="precio-nuevo" placeholder="Precio (€)" step="0.01" required />
+    <input type="text" id="img-nuevo" placeholder="URL de la imagen" required />
+    <button type="submit">Agregar al menú</button>
+  </form>
+</section>
+<button id="resetear-stock">Resetear Stock Original</button>
+
+
+  <script src="carrito.js"></script>
 </body>
 </html>

@@ -9,9 +9,9 @@ if (productosGuardados) {
   productos = [
     { id: 1, nombre: "Cerveza Rubia", precio: 1.5, img: "img/cerveza_rubia.jpg" },
     { id: 2, nombre: "Cerveza Negra", precio: 1.7, img: "img/cerveza_negra.jpg" },
-    { id: 3, nombre: "Vino Tinto", precio: 2.5, img: "img/vino_tinto.jpg" },
+    { id: 3, nombre: "Cerveza Roja", precio: 2, img: "img/cerveza_roja.jpg"},
     { id: 4, nombre: "Wisky", precio: 8, img: "img/wisky.jpg" },
-    { id: 5, nombre: "Cerveza Roja", precio: 2, img: "img/cerveza_roja.jpg" },
+    { id: 5, nombre: "Vino Tinto", precio: 2.5, img: "img/vino_tinto.jpg" },
     { id: 6, nombre: "Sidra", precio: 3, img: "img/sidra.jpg" },
     { id: 7, nombre: "Vodka", precio: 3, img: "img/vodka.jpg" },
     { id: 8, nombre: "Gin Tonic", precio: 5, img: "img/gintonic.jpg" },

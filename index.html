@@ -3,37 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bar Online - Carrito</title>
+  <title>Drako Bar - Carrito</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
+  <button id="toggle-theme" style="position:fixed; top:1rem; right:1rem; padding:0.5rem 1rem; z-index:1000; border-radius:5px; border:none; background:#e0a96d; color:#1c1b18; font-weight:bold; cursor:pointer;">
+  </button>
 
-  <h1>Drako Bar</h1>
-  <h2>Cocktails</h2>
+  <header>
+    <h1 class="animate__animated animate__bounce">🍹 Drako Bar</h1>
+    <h2>Cocktails & Merch</h2>
+  </header>
 
-  <section id="menu">
-    <h2>Menú de Productos</h2>
-    <div id="productos"></div>
-  </section>
+  <div class="layout">
+    <aside id="sidebar">
+      <h3>Categorías</h3>
+      <ul>
+        <li><button class="filtro" data-categoria="todos">⭐ Todos</button></li>
+        <li><button class="filtro" data-categoria="bebida">🍻 Bebidas</button></li>
+        <li><button class="filtro" data-categoria="merch">🛍️ Merch</button></li>
+      </ul>
+    </aside>
 
-  <section id="carrito">
-    <h2>Carrito de Compras</h2>
-    <div id="lista-carrito"></div>
-    <p>Su Total es: €<span id="total">0.00</span></p>
-    <button id="vaciar-carrito">Vaciar Carrito</button>
-  </section>
-  <section id="nuevo-producto">
-  <h2>Agregar nuevo producto</h2>
-  <form id="form-nuevo-producto">
-    <input type="text" id="nombre-nuevo" placeholder="Nombre" required />
-    <input type="number" step="0.01" id="precio-nuevo" placeholder="Precio (€)" required />
-    <input type="text" id="img-nuevo" placeholder="URL de imagen o ruta local" required />
-    <button type="submit">Agregar</button>
-  </form>
-</section>
+    <main>
+      <section id="menu">
+        <h2>Menú de Productos</h2>
+        <div id="productos" class="catalogo"></div>
+      </section>
 
-<button id="resetear-stock">Resetear Stock Original</button>
+      <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <div id="lista-carrito"></div>
+        <p>Su Total es: €<span id="total">0.00</span></p>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+        <button id="finalizar-compra">Finalizar Compra</button>
+      </section>
 
+      <section id="nuevo-producto">
+        <h2>Agregar nuevo producto</h2>
+        <form id="form-nuevo-producto">
+          <input type="text" id="nombre-nuevo" placeholder="Nombre" required />
+          <input type="number" step="0.01" id="precio-nuevo" placeholder="Precio (€)" required />
+          <input type="text" id="img-nuevo" placeholder="URL de imagen o ruta local" required />
+          <select id="categoria-nuevo">
+            <option value="bebida">Bebida</option>
+            <option value="merch">Merch</option>
+          </select>
+          <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <button id="resetear-stock">Resetear Stock Original</button>
+    </main>
+  </div>
+
+  <footer>
+    <p>Proyecto Final JS - MERCADO ERIC 💻🔥</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="carrito.js"></script>
 </body>
 </html>

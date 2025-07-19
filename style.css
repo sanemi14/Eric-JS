@@ -4,11 +4,140 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 1rem;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 h1, h2 {
   text-align: center;
   color: #e0a96d;
+}
+
+#toggle-theme:hover {
+  background-color: #d58d40;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+#finalizar-compra {
+  background-color: #3a803a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: background-color 0.3s;
+}
+
+#finalizar-compra:hover {
+  background-color: #2e6b2e;
+}
+
+.producto.animate__animated {
+  --animate-delay: 0s;
+  animation-delay: var(--animate-delay);
+}
+
+body.light {
+  background-color: #f5f2e7;
+  color: #1c1b18;
+}
+
+body.light #menu,
+body.light #carrito,
+body.light #sidebar,
+body.light #nuevo-producto {
+  background-color: #f0e6d2;
+  color: #1c1b18;
+  box-shadow: 0 0 10px rgba(150, 120, 70, 0.3);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light .producto {
+  background-color: #fffbea;
+  color: #1c1b18;
+  box-shadow: 0 2px 5px rgba(150, 120, 70, 0.15);
+}
+
+body.light .producto button,
+body.light #vaciar-carrito,
+body.light #resetear-stock,
+body.light #form-nuevo-producto button,
+body.light #finalizar-compra {
+  background-color: #d58d40;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light .producto button:hover,
+body.light #vaciar-carrito:hover,
+body.light #resetear-stock:hover,
+body.light #form-nuevo-producto button:hover,
+body.light #finalizar-compra:hover {
+  background-color: #e0a96d;
+  color: #1c1b18;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#sidebar {
+  background-color: #2b2a27;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(100, 70, 30, 0.2);
+  height: fit-content;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#sidebar h3 {
+  color: #e0a96d;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#sidebar button.filtro {
+  background-color: #3a3732;
+  color: #f5f2e7;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+#sidebar button.filtro:hover {
+  background-color: #e0a96d;
+  color: #1c1b18;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  #sidebar {
+    margin-bottom: 1.5rem;
+  }
 }
 
 #menu, #carrito {
@@ -18,6 +147,7 @@ h1, h2 {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(100, 70, 30, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #productos {
@@ -32,7 +162,7 @@ h1, h2 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.5s ease, color 0.5s ease;
 }
 
 .producto:hover {
@@ -42,7 +172,11 @@ h1, h2 {
 .producto img {
   width: 100%;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #2b2a27;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px 8px 0 0;
 }
 
 .producto div {
@@ -61,6 +195,7 @@ h1, h2 {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .producto button:hover {
@@ -81,6 +216,7 @@ button.btn-eliminar {
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button.btn-restar:hover,
@@ -98,6 +234,7 @@ button.btn-eliminar:hover {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #vaciar-carrito:hover, #resetear-stock:hover {
@@ -112,6 +249,7 @@ button.btn-eliminar:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(100, 70, 30, 0.2);
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #form-nuevo-producto {
@@ -143,6 +281,7 @@ button.btn-eliminar:hover {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #form-nuevo-producto button:hover,

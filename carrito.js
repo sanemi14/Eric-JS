@@ -16,10 +16,10 @@ let productos = [];
 let carrito = [];
 
 const stockInicial = [
-  { id: 1, nombre: "Cerveza Rubia", precio: 1.5, img: "img/cerveza_rubia.jpg", categoria: "bebida" },
-  { id: 2, nombre: "Cerveza Negra", precio: 1.7, img: "img/cerveza_negra.jpg", categoria: "bebida" },
-  { id: 3, nombre: "Cerveza Roja", precio: 2, img: "img/cerveza_roja.jpg", categoria: "bebida" },
-  { id: 4, nombre: "Whisky", precio: 8, img: "img/wisky.jpg", categoria: "bebida" },
+  { id: 1, nombre: "Cerveza Rubia 0.33 L", precio: 1.5, img: "img/cerveza_rubia.jpg", categoria: "bebida" },
+  { id: 2, nombre: "Cerveza Negra 0.33 L", precio: 1.7, img: "img/cerveza_negra.jpg", categoria: "bebida" },
+  { id: 3, nombre: "Cerveza Roja 0.33 L", precio: 2, img: "img/cerveza_roja.jpg", categoria: "bebida" },
+  { id: 4, nombre: "Whisky Botella", precio: 35, img: "img/wisky.jpg", categoria: "bebida" },
   { id: 5, nombre: "Vino Tinto", precio: 2.5, img: "img/vino_tinto.jpg", categoria: "bebida" },
   { id: 6, nombre: "Sidra", precio: 3, img: "img/sidra.jpg", categoria: "bebida" },
   { id: 7, nombre: "Vodka", precio: 3, img: "img/vodka.jpg", categoria: "bebida" },
